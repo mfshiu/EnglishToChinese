@@ -14,32 +14,11 @@ EOS_token = 1
 MAX_LENGTH = 32
 
 
-def parse_arguments():
-    p = argparse.ArgumentParser(description='Translate Sentence')
-    p.add_argument(
-        '-model',
-        type=str,
-        default=model.DEFAULT_MODEL,
-        help='pre-trained model [' + model.DEFAULT_MODEL + ']')
-    p.add_argument(
-        'sentence',
-        type=str,
-        default="",
-        help='Sentence to be translated')
-
-    return p.parse_args()
-
-
 if __name__ == '__main__':
-    args = parse_arguments()
-
     assert torch.cuda.is_available()
 
-    if not os.path.exists(args.model):
-        print("model %s not exists." % (args.model))
-        sys.exit(-1)
-
-    seq2seq = torch.load(args.model)
+    model = "models/model.pt"
+    seq2seq = torch.load(model)
     seq2seq = seq2seq.cuda()
 
     data.EnglishText.vocab = data.load_vocab("models/english.vocab")
