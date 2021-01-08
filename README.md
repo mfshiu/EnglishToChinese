@@ -3,7 +3,7 @@ English To Chinese
 
 **以具有 Attention 機制的 GRU 網路，以近 19 萬筆語料訓練模型，藉由所得之模型，準確作中文翻譯為英文之工具。**
 
-模型架構
+**模型架構
 ![](model.png)
 from [Ayush Jain May 22, 2020](https://towardsdatascience.com/intuitive-understanding-and-step-by-step-implementation-of-sequence-to-sequence-model-with-86be00ebe0fd)
 
@@ -36,32 +36,3 @@ from [Ayush Jain May 22, 2020](https://towardsdatascience.com/intuitive-understa
 
 ### 訓練成果統計圖
 ![](evaluation.png)
-
-
-
-
-Evaluation
-----
-`python eval.py`
-
-
-
-Translate
-----
-`python translate.py "english sentence"`
-
-
-
-Requirements
-----
-
-- Python 3.6
-- Pytorch 0.4.0
-- torchtext 0.3.0
-
-
-
-Reference
-----
-
-[Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473)
