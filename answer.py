@@ -31,6 +31,7 @@ if __name__ == '__main__':
     sentences = lines[:2]
     size = len(sentences)
     for index, sentence in enumerate(sentences):
+        sentence = sentence.strip()
         s = [data.EnglishText.vocab.stoi[w] for w in data.EnglishText.preprocess(sentence)]
         s.append(EOS_token)
         src = torch.LongTensor(s).view(-1, 1)
