@@ -28,6 +28,7 @@ if __name__ == '__main__':
         lines = fp.readlines()
 
     out_lines = []
+    # sentences = lines  # [:20]
     sentences = lines[:20]
     size = len(sentences)
     for index, sentence in enumerate(sentences):
@@ -47,7 +48,7 @@ if __name__ == '__main__':
         x = torch.argmax(x.squeeze(1), dim=1).cpu()
         words = [data.ChineseText.vocab.itos[i] for i in x]
 
-        translated = "".join(words)
+        translated = "".join(words)[5:]
         print("[%d/%d] Source: %s" % (index, size, sentence))
         print("[%d/%d] Result: %s" % (index, size, translated))
 
