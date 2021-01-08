@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
         translated = "".join(words)
         print("[%d/%d] Source: %s" % (index, size, sentence))
-        print("[%d/%d] Result: %s", (index, size, translated))
+        print("[%d/%d] Result: %s" % (index, size, translated))
 
         out_lines.append("%s\t%s\n" % (sentence, translated))
 
