@@ -28,7 +28,7 @@ if __name__ == '__main__':
         lines = fp.readlines()
 
     out_lines = []
-    sentences = lines[:2]
+    sentences = lines[:20]
     size = len(sentences)
     for index, sentence in enumerate(sentences):
         sentence = sentence.strip()
