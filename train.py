@@ -103,7 +103,7 @@ if __name__ == '__main__':
     # assert torch.cuda.is_available()
 
     traindata, en_field, zh_field = data.translate_dataloader(
-        "data/en-zh.txt", args.batch_size, shuffle=True)
+        "data/train-seg.tsv", args.batch_size, shuffle=True)
     data.save_vocab(en_field.vocab, "models/english.vocab")
     data.save_vocab(zh_field.vocab, "models/chinese.vocab")
 
