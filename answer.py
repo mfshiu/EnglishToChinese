@@ -53,4 +53,4 @@ if __name__ == '__main__':
         out_lines.append("%s\t%s\n" % (sentence, translated))
 
     with open("data/output.txt", "w") as fp:
-        lines = fp.readlines()
+        fp.writelines(out_lines)
